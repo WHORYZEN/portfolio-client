@@ -1,52 +1,111 @@
 import PremiumButton from "@/components/PremiumButton"
-import { motion } from "motion/react"
+import { useEffect, useRef } from "react"
+import gsap from "gsap"
+import { scrollToSection } from "@/lib/scrollToSection"
 
-export default function Hero() {
+export default function Hero({ startAnimation }) {
+  const heroRef = useRef(null)
+  const badgeRef = useRef(null)
+  const titleRef = useRef(null)
+  const textRef = useRef(null)
+  const buttonsRef = useRef(null)
+
+  useEffect(() => {
+    if (!startAnimation) return
+
+    const ctx = gsap.context(() => {
+      gsap.set(
+        [
+          badgeRef.current,
+          titleRef.current,
+          textRef.current,
+          buttonsRef.current,
+        ],
+        {
+          opacity: 0,
+          y: 40,
+        }
+      )
+
+      const tl = gsap.timeline({
+        defaults: {
+          ease: "power4.out",
+          duration: 1,
+        },
+      })
+
+      tl.to(badgeRef.current, {
+        y: 0,
+        opacity: 1,
+      })
+        .to(
+          titleRef.current,
+          {
+            y: 0,
+            opacity: 1,
+          },
+          "-=0.7"
+        )
+        .to(
+          textRef.current,
+          {
+            y: 0,
+            opacity: 1,
+          },
+          "-=0.6"
+        )
+        .to(
+          buttonsRef.current,
+          {
+            y: 0,
+            opacity: 1,
+          },
+          "-=0.6"
+        )
+    }, heroRef)
+
+    return () => ctx.revert()
+  }, [startAnimation])
+
   return (
-    <section className="relative flex min-h-screen items-center overflow-hidden px-6 pt-28">
+    <section
+      ref={heroRef}
+      className="relative flex min-h-screen items-center overflow-hidden px-6 pt-28"
+    >
       <div className="absolute left-1/2 top-0 h-[520px] w-[520px] -translate-x-1/2 rounded-full bg-primary/20 blur-[130px]" />
       <div className="absolute bottom-0 right-0 h-[440px] w-[440px] rounded-full bg-secondary/25 blur-[130px]" />
       <div className="absolute bottom-24 left-10 h-[260px] w-[260px] rounded-full bg-accent/15 blur-[100px]" />
 
       <div className="relative z-10 mx-auto max-w-7xl">
-        <motion.p
-          initial={{ opacity: 0, y: 24 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7 }}
-          className="mb-6 w-fit rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-white/70 backdrop-blur-xl"
+        <p
+          ref={badgeRef}
+          className="mb-6 w-fit rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-white/70 opacity-0 backdrop-blur-xl"
         >
           MERN Stack Developer · React · Node.js · UI Engineer
-        </motion.p>
+        </p>
 
-        <motion.h1
-          initial={{ opacity: 0, y: 32 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.9, delay: 0.1 }}
-          className="max-w-6xl text-5xl font-black leading-[0.95] tracking-[-0.07em] md:text-7xl lg:text-8xl"
+        <h1
+          ref={titleRef}
+          className="max-w-6xl text-5xl font-black leading-[0.95] tracking-[-0.07em] opacity-0 md:text-7xl lg:text-8xl"
         >
           Designing and building seamless digital products.
-        </motion.h1>
+        </h1>
 
-        <motion.p
-          initial={{ opacity: 0, y: 28 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.9, delay: 0.2 }}
-          className="mt-7 max-w-2xl text-lg leading-8 text-white/60"
+        <p
+          ref={textRef}
+          className="mt-7 max-w-2xl text-lg leading-8 text-white/60 opacity-0"
         >
           I create clean, scalable and high-performing web applications using
           React, JavaScript, Tailwind, shadcn/ui, Node.js and modern frontend
           architecture.
-        </motion.p>
+        </p>
 
-        <motion.div
-          initial={{ opacity: 0, y: 28 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.9, delay: 0.3 }}
-          className="mt-10 flex flex-wrap gap-4"
-        >
-          <PremiumButton>View Projects</PremiumButton>
+        <div ref={buttonsRef} className="mt-10 flex flex-wrap gap-4 opacity-0">
+          <div onClick={() => scrollToSection("#work")}>
+            <PremiumButton>View Projects</PremiumButton>
+          </div>
           <PremiumButton>Let&apos;s Collaborate</PremiumButton>
-        </motion.div>
+        </div>
       </div>
     </section>
   )

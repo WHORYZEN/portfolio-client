@@ -1,19 +1,55 @@
-import { motion } from "motion/react"
+import { motion, useInView, useMotionValue, useSpring } from "motion/react"
+import { useEffect, useRef, useState } from "react"
 
 const stats = [
   {
-    value: "10+",
+    value: 10,
+    suffix: "+",
     label: "Projects Built",
   },
   {
-    value: "5+",
+    value: 5,
+    suffix: "+",
     label: "Core Technologies",
   },
   {
-    value: "100%",
+    value: 100,
+    suffix: "%",
     label: "Responsive Focus",
   },
 ]
+
+function Counter({ value, suffix }) {
+  const ref = useRef(null)
+  const isInView = useInView(ref, { once: true })
+
+  const motionValue = useMotionValue(0)
+  const springValue = useSpring(motionValue, {
+    stiffness: 80,
+    damping: 20,
+  })
+
+  const [displayValue, setDisplayValue] = useState(0)
+
+  useEffect(() => {
+    if (isInView) {
+      motionValue.set(value)
+    }
+  }, [isInView, motionValue, value])
+
+  useEffect(() => {
+    return springValue.on("change", (latest) => {
+      setDisplayValue(Math.round(latest))
+    })
+  }, [springValue])
+
+  return (
+    <span ref={ref}>
+      {displayValue}
+      {suffix}
+    </span>
+  )
+}
 
 export default function Stats() {
   return (
@@ -29,7 +65,7 @@ export default function Stats() {
             className="rounded-[2rem] border border-white/10 bg-white/[0.04] p-8"
           >
             <h3 className="text-5xl font-black tracking-[-0.06em] text-primary">
-              {stat.value}
+              <Counter value={stat.value} suffix={stat.suffix} />
             </h3>
             <p className="mt-3 text-white/55">{stat.label}</p>
           </motion.div>

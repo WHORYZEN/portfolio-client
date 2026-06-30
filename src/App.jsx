@@ -11,6 +11,7 @@ import CursorGlow from "@/components/CursorGlow"
 import Stats from "@/sections/stats/Stats"
 import Marquee from "@/components/Marquee"
 import ScrollProgress from "@/components/ScrollProgress"
+import Noise from "@/components/Noise"
 import { useEffect, useState } from "react"
 import Loader from "@/components/Loader"
 
@@ -31,9 +32,10 @@ function App() {
 
       <SmoothScroll>
         <ScrollProgress />
+        <Noise />
         <CursorGlow />
-        <Navbar />
-        <Hero />
+        <Navbar startAnimation={!loading} />
+        <Hero startAnimation={!loading} />
         <Stats />
         <Marquee />
         <Work />
