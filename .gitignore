@@ -1,15 +1,6 @@
-# dependencies
 node_modules
-
-# env files
-.env
-server/.env
-
-# build files
 dist
-
-# OS files
+.env
 .DS_Store
-
-# logs
 *.log
+server
