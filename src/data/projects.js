@@ -1,3 +1,7 @@
+import fuelImg from "@/assets/projects/project_1.png";
+import pulseImg from "@/assets/projects/project_2.png";
+import nordicImg from "@/assets/projects/project_3.png";
+
 export const projects = [
   {
     title: "SaaS Dashboard",
@@ -5,8 +9,8 @@ export const projects = [
     description:
       "A clean analytics dashboard with authentication, charts and responsive layouts.",
     year: "2026",
-    color: "from-primary/30 to-accent/20",
-    preview: "bg-gradient-to-br from-primary via-accent to-secondary",
+    color: "from-orange/30 via-primary/20 to-accent/20",
+    image: fuelImg,
     stack: ["React", "Tailwind", "Node.js"],
     liveUrl: "#",
     githubUrl: "#",
@@ -17,8 +21,8 @@ export const projects = [
     description:
       "A full-stack store with product management, cart, checkout and admin panel.",
     year: "2026",
-    color: "from-secondary/35 to-primary/20",
-    preview: "bg-gradient-to-br from-secondary via-primary to-accent",
+    color: "from-secondary/30 via-orange/20 to-primary/20",
+    image: pulseImg,
     stack: ["React", "Tailwind", "Node.js"],
     liveUrl: "#",
     githubUrl: "#",
@@ -29,8 +33,8 @@ export const projects = [
     description:
       "A modern landing page with premium motion, smooth scroll and conversion-focused UI.",
     year: "2026",
-    color: "from-accent/30 to-secondary/25",
-    preview: "bg-gradient-to-br from-accent via-secondary to-primary",
+    color: "from-accent/30 via-secondary/20 to-orange/20",
+    image: nordicImg,
     stack: ["React", "Tailwind", "Node.js"],
     liveUrl: "#",
     githubUrl: "#",

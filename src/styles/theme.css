@@ -1,26 +1,18 @@
 :root {
-  /* Backgrounds */
-  --background: #070707;
-  --background-secondary: #111111;
+  --background: #060606;
+  --background-secondary: #0d0d0d;
 
-  /* Text */
-  --foreground: #ffffff;
-  --foreground-muted: rgba(255,255,255,0.65);
+  --foreground: #f7f7f2;
+  --foreground-muted: rgba(247, 247, 242, 0.62);
 
-  /* Borders */
-  --border: rgba(255,255,255,0.08);
+  --border: rgba(247, 247, 242, 0.1);
+  --card: rgba(247, 247, 242, 0.045);
 
-  /* Cards */
-  --card: rgba(255,255,255,0.04);
+  --primary: #d8ff3e;
+  --secondary: #ff4ecd;
+  --accent: #00e5ff;
+  --orange: #ff6a1a;
 
-  /* Brand colors */
-  --primary: #C7FF40;
-  --secondary: #7C3AED;
-  --accent: #00E5FF;
-
-  /* Radius */
-  --radius: 24px;
-
-  /* Container */
+  --radius: 28px;
   --container: 1440px;
 }
