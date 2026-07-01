@@ -54,25 +54,16 @@ function AccordionTrigger({
   );
 }
 
-function AccordionContent({
-  className,
-  children,
-  ...props
-}) {
+function AccordionContent({ className, children, ...props }) {
   return (
     <AccordionPrimitive.Content
       data-slot="accordion-content"
-      className="overflow-hidden text-sm data-open:animate-accordion-down data-closed:animate-accordion-up"
-      {...props}>
-      <div
-        className={cn(
-          "h-(--radix-accordion-content-height) pt-0 pb-4 [&_a]:underline [&_a]:underline-offset-3 [&_a]:hover:text-foreground [&_p:not(:last-child)]:mb-4",
-          className
-        )}>
-        {children}
-      </div>
+      className="overflow-hidden text-sm transition-all duration-700 ease-[cubic-bezier(0.76,0,0.24,1)] data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down"
+      {...props}
+    >
+      <div className={cn("pb-7 pt-0", className)}>{children}</div>
     </AccordionPrimitive.Content>
-  );
+  )
 }
 
 export { Accordion, AccordionItem, AccordionTrigger, AccordionContent }
