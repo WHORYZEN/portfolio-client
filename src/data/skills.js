@@ -1,14 +1,22 @@
-export const skills = [
-  "JavaScript",
-  "React",
-  "Node.js",
-  "Express.js",
-  "MongoDB",
-  "Tailwind CSS",
-  "shadcn/ui",
-  "Vite",
-  "REST APIs",
-  "Git & GitHub",
-  "Responsive UI",
-  "Framer Motion",
+export const skillGroups = [
+  {
+    title: "Frontend Engineering",
+    description: "Building modern, responsive and scalable user interfaces.",
+    skills: ["React", "JavaScript", "Tailwind", "shadcn/ui", "Motion", "GSAP"],
+  },
+  {
+    title: "Backend Development",
+    description: "Creating APIs and server-side functionality.",
+    skills: ["Node.js", "Express", "REST APIs", "MongoDB", "Nodemailer"],
+  },
+  {
+    title: "UI Engineering",
+    description: "Designing polished digital experiences.",
+    skills: ["Responsive UI", "Animations", "Design Systems", "Performance"],
+  },
+  {
+    title: "Tools & Workflow",
+    description: "Professional development workflow and deployment.",
+    skills: ["Git", "GitHub", "Vite", "VS Code", "Vercel", "Render"],
+  },
 ]

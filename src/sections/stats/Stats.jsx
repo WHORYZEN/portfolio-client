@@ -62,7 +62,7 @@ export default function Stats() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-80px" }}
             transition={{ duration: 0.6, delay: index * 0.08 }}
-            className="rounded-[2rem] border border-white/10 bg-white/[0.04] p-8"
+            className="rounded-[2rem] border border-white/10 bg-card/80 p-8 backdrop-blur-xl transition hover:border-primary/40"
           >
             <h3 className="text-5xl font-black tracking-[-0.06em] text-primary">
               <Counter value={stat.value} suffix={stat.suffix} />

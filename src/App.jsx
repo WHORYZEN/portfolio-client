@@ -16,6 +16,8 @@ import { useEffect, useState } from "react"
 import Loader from "@/components/Loader"
 import Work from "@/sections/work/Work"
 import FAQ from "@/sections/faq/FAQ"
+import Education from "@/sections/education/Education"
+import Highlights from "@/sections/highlights/Highlights"
 
 function App() {
   const [loading, setLoading] = useState(true)
@@ -40,11 +42,13 @@ function App() {
         <Hero startAnimation={!loading} />
         <Stats />
         <Marquee />
-        <StickyWork />
         <About />
-        <Work />
         <Skills />
+        <StickyWork />
         <Experience />
+        <Education />
+        <Highlights />
+        <Work />
         <FAQ />
         <Contact />
         <Footer />

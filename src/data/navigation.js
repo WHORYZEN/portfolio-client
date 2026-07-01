@@ -8,8 +8,12 @@ export const navigation = [
     href: "#about",
   },
   {
-    title: "Skills",
-    href: "#skills",
+    title: "Resume",
+    href: "#experience",
+  },
+  {
+    title: "FAQ",
+    href: "#faq",
   },
   {
     title: "Contact",
