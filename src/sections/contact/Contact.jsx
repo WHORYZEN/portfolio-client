@@ -71,11 +71,11 @@ export default function Contact() {
           </p>
 
           <h2 className="text-5xl font-black leading-[0.95] tracking-[-0.06em] md:text-7xl">
-            Let’s build something sharp.
+            Tell me about your next project.
           </h2>
 
           <p className="mt-6 text-lg leading-8 text-white/60">
-            Send a message and I’ll get back to you soon.
+            Whether it’s a portfolio, dashboard, landing page or full-stack feature — send the details and I’ll reply soon.
           </p>
         </motion.div>
 
@@ -94,7 +94,7 @@ export default function Contact() {
               onChange={handleChange}
               type="text"
               placeholder="Your name"
-              className="h-14 rounded-full border border-white/10 bg-black/30 px-6 text-white outline-none transition focus:border-primary"
+              className="h-14 rounded-full border border-white/10 bg-card px-6 text-white outline-none transition placeholder:text-white/35 focus:border-primary"
             />
 
             <input
@@ -103,7 +103,7 @@ export default function Contact() {
               onChange={handleChange}
               type="email"
               placeholder="Email address"
-              className="h-14 rounded-full border border-white/10 bg-black/30 px-6 text-white outline-none transition focus:border-primary"
+              className="h-14 rounded-full border border-white/10 bg-card px-6 text-white outline-none transition placeholder:text-white/35 focus:border-primary"
             />
 
             <textarea
@@ -112,14 +112,14 @@ export default function Contact() {
               onChange={handleChange}
               placeholder="Tell me about your project"
               rows="6"
-              className="resize-none rounded-[1.5rem] border border-white/10 bg-black/30 p-6 text-white outline-none transition focus:border-primary"
+              className="resize-none rounded-[1.5rem] border border-white/10 bg-card p-6 text-white outline-none transition placeholder:text-white/35 focus:border-primary"
             />
 
             <PremiumButton>
               {isSubmitting ? "Sending..." : "Send Message"}
             </PremiumButton>
             {status && (
-              <p className="text-sm text-primary">
+              <p className="rounded-full border border-primary/30 bg-primary/10 px-4 py-3 text-sm text-primary">
                 {status}
               </p>
             )}

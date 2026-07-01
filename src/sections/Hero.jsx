@@ -70,7 +70,7 @@ export default function Hero({ startAnimation }) {
   return (
     <section
       ref={heroRef}
-      className="relative flex min-h-screen items-center overflow-hidden px-6 pt-28"
+      className="relative flex min-h-screen items-center overflow-hidden px-6 pb-16 pt-32"
     >
       <div className="absolute left-1/2 top-0 h-[520px] w-[520px] -translate-x-1/2 rounded-full bg-primary/20 blur-[130px]" />
       <div className="absolute bottom-0 right-0 h-[440px] w-[440px] rounded-full bg-secondary/25 blur-[130px]" />
@@ -88,23 +88,38 @@ export default function Hero({ startAnimation }) {
           ref={titleRef}
           className="max-w-6xl text-5xl font-black leading-[0.95] tracking-[-0.07em] opacity-0 md:text-7xl lg:text-8xl"
         >
-          Designing and building seamless digital products.
+          I build clean web products with code, clarity and motion.
         </h1>
 
         <p
           ref={textRef}
           className="mt-7 max-w-2xl text-lg leading-8 text-white/60 opacity-0"
         >
-          I create clean, scalable and high-performing web applications using
-          React, JavaScript, Tailwind, shadcn/ui, Node.js and modern frontend
-          architecture.
+          A software developer focused on React, JavaScript, Tailwind, shadcn/ui and Node.js — building modern portfolio websites, dashboards and full-stack web experiences.
         </p>
 
         <div ref={buttonsRef} className="mt-10 flex flex-wrap gap-4 opacity-0">
           <div onClick={() => scrollToSection("#work")}>
-            <PremiumButton>View Projects</PremiumButton>
-          </div>
-          <PremiumButton>Let&apos;s Collaborate</PremiumButton>
+  <PremiumButton>View Projects</PremiumButton>
+</div>
+          <div onClick={() => scrollToSection("#contact")}>
+  <PremiumButton>Let&apos;s Collaborate</PremiumButton>
+</div>
+        </div>
+        <div className="mt-14 grid max-w-3xl gap-4 sm:grid-cols-3">
+          {[
+            ["Available", "Open to work"],
+            ["Location", "India · Remote"],
+            ["Focus", "MERN Stack"],
+          ].map(([title, value]) => (
+            <div
+              key={title}
+              className="rounded-2xl border border-white/10 bg-white/[0.035] p-5 backdrop-blur-xl"
+            >
+              <p className="text-sm text-white/40">{title}</p>
+              <p className="mt-2 font-semibold text-white/80">{value}</p>
+            </div>
+          ))}
         </div>
       </div>
     </section>
