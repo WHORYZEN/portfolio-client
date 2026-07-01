@@ -2,7 +2,7 @@ import Navbar from "@/components/layout/Navbar"
 import Hero from "@/sections/Hero"
 import SmoothScroll from "@/components/layout/SmoothScroll"
 import Footer from "@/components/layout/Footer"
-import Work from "@/sections/work/Work"
+import StickyWork from "@/sections/work/StickyWork"
 import About from "@/sections/about/About"
 import Skills from "@/sections/skills/Skills"
 import Contact from "@/sections/contact/Contact"
@@ -14,6 +14,7 @@ import ScrollProgress from "@/components/ScrollProgress"
 import Noise from "@/components/Noise"
 import { useEffect, useState } from "react"
 import Loader from "@/components/Loader"
+import Work from "@/sections/work/Work"
 
 function App() {
   const [loading, setLoading] = useState(true)
@@ -38,8 +39,9 @@ function App() {
         <Hero startAnimation={!loading} />
         <Stats />
         <Marquee />
-        <Work />
+        <StickyWork />
         <About />
+        <Work />
         <Skills />
         <Experience />
         <Contact />
