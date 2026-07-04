@@ -77,9 +77,8 @@ export default function About() {
             </h3>
 
             <p className="mt-5 text-black/70">
-              I’m currently strengthening my JavaScript, React, UI engineering
-              and MERN stack fundamentals by building production-style projects
-              from scratch.
+              I’m currently strengthening my Typescript and React skills by building premium interfaces and full-stack portfolio projects. 
+              I’m also exploring new technologies like Three.js, Prisma, tRPC, and Tailwind to stay up-to-date with the latest trends in web development.
             </p>
           </motion.div>
 

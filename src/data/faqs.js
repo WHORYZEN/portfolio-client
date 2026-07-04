@@ -22,6 +22,6 @@ export const faqs = [
   {
     question: "Are you available for internships or freelance work?",
     answer:
-      "Yes. I am open to frontend, MERN stack, and modern web development opportunities including internships, freelance projects, and collaborative product builds.",
+      "Yes. I am open to frontend, MERN stack, and modern web development opportunities including freelance projects, and collaborative product builds.",
   },
 ]

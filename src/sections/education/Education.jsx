@@ -13,7 +13,7 @@ export default function Education() {
 
           <TextReveal>
             <h2 className="text-4xl font-black tracking-[-0.05em] md:text-6xl">
-              Learning by building real products.
+              My Academic Journey.
             </h2>
           </TextReveal>
         </div>

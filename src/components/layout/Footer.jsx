@@ -11,7 +11,7 @@ const socials = [
   },
   {
     title: "LinkedIn",
-    href: "#",
+    href: "https://www.linkedin.com/in/kanishk-shukla-softwaredev/",
     icon: FaLinkedinIn,
   },
   {
@@ -36,8 +36,10 @@ export default function Footer() {
             </p>
 
             <h2 className="mt-8 max-w-5xl text-6xl font-black leading-[0.9] tracking-[-0.08em] md:text-8xl">
-              Let&apos;s build something clean, fast and memorable.
+              Let&apos;s build something clean, fast and <h2 className="text-primary mt-1 max-w-5xl text-6xl font-black leading-[0.9] tracking-[-0.08em] md:text-8xl">
+                memorable.</h2>
             </h2>
+
 
             <a
               href="mailto:kanishkshkl@gmail.com"

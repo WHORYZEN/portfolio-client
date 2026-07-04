@@ -1,9 +1,9 @@
 export const achievements = [
   {
     number: "01",
-    title: "Full-Stack Contact System",
+    title: "Full-Stack Web Applications",
     description:
-      "Built a working React contact form connected to a Node.js backend with Nodemailer email delivery.",
+      "Built a working MERN Stack platform with a React frontend and Node.js backend, including a MongoDB database and RESTful API endpoints.",
   },
   {
     number: "02",

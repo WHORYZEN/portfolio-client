@@ -72,7 +72,7 @@ export default function StickyWork() {
             </p>
             <p className="mt-4 text-white/55">
               Each card stacks with depth while the project image moves subtly
-              to create a premium editorial portfolio feel.
+              to create a premium editorial portfolio feel. 
             </p>
           </div>
         </div>

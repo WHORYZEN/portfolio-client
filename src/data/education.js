@@ -1,16 +1,16 @@
 export const education = [
   {
-    title: "Software Development",
-    institution: "Self-Learning / Project-Based Practice",
-    period: "2023 — Present",
+    title: "B.Tech + M.Tech in Automobile Engineering",
+    institution: "Amity University Noida",
+    period: "2017 — 2022",
     description:
       "Focused on JavaScript, React, Tailwind, Node.js, Express, Git, GitHub, API integration and deployment workflows.",
   },
   {
-    title: "MERN Stack Projects",
-    institution: "Portfolio Build Practice",
-    period: "2024 — Present",
+    title: "PCM (Physics, Chemistry, Mathematics)",
+    institution: "Ryan International School, Ghaziabad",
+    period: "2017",
     description:
-      "Built real-world style projects including portfolio websites, dashboards, contact APIs and responsive UI systems.",
+      "Scored 89.2% in PCM. Focused on building a strong foundation in problem-solving, analytical thinking, and logical reasoning.",
   },
 ]

@@ -1,32 +1,32 @@
 export const experience = [
   {
-    role: "MERN Stack Developer",
-    company: "Personal / Portfolio Projects",
+    role: "Full-Stack Web Developer",
+    company: "Mynx Softwares Inc.",
     period: "2025 — Present",
     points: [
-      "Building full-stack web applications using React, Node.js, Express and MongoDB.",
+      "Architected and scaled a mission-critical Electronic Medical Record (EMR) platform designed to streamline clinical workflows for healthcare providers.",
       "Creating premium, responsive interfaces with Tailwind CSS and shadcn/ui.",
-      "Implementing contact APIs, authentication basics, dashboards and deployment-ready project structure.",
+      "Directly responsible for solving complex data latency, automation, and hands-free accessibility challenges using a robust full-stack JavaScript ecosystem and secure AWS cloud infrastructure.",
     ],
   },
   {
-    role: "Frontend Developer",
-    company: "React UI Projects",
+    role: "MERN Stack Developer",
+    company: "BIOSAP E-Commerce Project",
     period: "2024 — 2025",
     points: [
       "Developed reusable React components and clean section-based architecture.",
-      "Focused on responsive layouts, animations, accessibility and performance.",
-      "Converted visual references into polished portfolio and landing page interfaces.",
+      "Managed dynamic content through MySQL databases and content management systems",
+      "Developed Node.js backend with event-driven architecture for seamless data handling.",
     ],
   },
   {
-    role: "JavaScript Foundation",
-    company: "Core Learning",
+    role: "Backend Engineer",
+    company: "OPPO Mobiles India Pvt. Ltd.",
     period: "2023 — 2024",
     points: [
-      "Strengthened JavaScript fundamentals, DOM, events, APIs and async programming.",
-      "Practiced Git, GitHub, npm, Vite and modern frontend workflow.",
-      "Built small projects to understand state, components and data flow.",
+      "Engineered and optimized database schemas in MongoDB, enhancing data retrieval speed by 40% through effective query optimization strategies while maintaining robust data integrity for large-scale applications.",
+      "Experienced in creating RESTful APIs to support dynamic, data-driven applications, with a focus on performance, security, and maintainability.",
+      "Focused on building scalable and secure backend architectures using Node.js and Express.js",
     ],
   },
 ]
